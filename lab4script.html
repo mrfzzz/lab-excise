@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function larger(){
+            alert(document.getElementById('first').style.fontSize);
+            var currentSize=document.getElementById('first').style.fontSize;
+            alert(currentSize);
+            var lengthOfString=currentSize.length;
+            alert(lengthOfString);
+            var numericSize=currentSize.substring(0,lengthOfString-2);
+            alert(numericSize);
+            var newSize=numericSize*2;
+            alert(newSize);
+            var newSize=newSize+"px";
+            alert('The new size will be '+newSize);
+            document.getElementById('first').style.fontSize=newSize;
+        }
+    </script>
+    <script>
+        function changebgcolour(colour){
+            document.body.style.backgroundColor=colour;
+        }
+    </script>
+</head>
+<body>
+    <!--Main content-->
+    <h1>Welcome to JavaScript</h1>
+    <p>Ian learning to write a script on my page.</p>
+    <script>
+        alert('Hello new scripter');
+        function HelloFun(){
+            window.documnet.getElementById('first').style.fontSize="spx"
+            window.document.getElementById('second').style.fontSize="40px";
+        }
+    </script>
+    <!--<p>Try hovering over the red words
+        <span onmouseover="alert('caught you ');"style="color:red;">just here</span>
+        to see what happens.
+    </p>-->
+    <script>
+        function HelloFun(){
+            alert('Have a nice day');
+        }
+    </script>
+    <p>Now,try hovering over green words
+        <span onmouseover="alert('caught you');"style="color:green;">just here</span>
+        to see what happens.
+    </p>
+    <script>
+        document.body.style.fontFamily="Verdana";
+        document.body.style.fontSize="30px";
+        document.body.style.fontStyle="italic";
+        document.body.style.padding="100px";
+    </script>
+    <p id="first">This is the first paragraph and
+        <span onmouseover="HelloFun();" style="color:blue;">you should hover here</span>
+        <p id="second">This is the second paragraph.</p>
+    </p>
+    <p id="first" style="font-family: Verdana;">This is the paragraph for Exercise 7 and 
+        <span onmouseover="HelloFun();"style="color:blue;">you should hover here.</span> 
+    </p>
+
+    <button onclick="larger()">larger</button>
+    <p id="first" style="font-size: 16px;">Exercise 11</p>
+    <p onclick="changebgcolour('green');">Green</p>
+    <p onclick="changebgcolour('Blue');">Blue</p>
+    <p onclick="changebgcolour('Red');">Red</p>
+    <p id="demo">Date: </p>
+    <script>
+        const d = new Date()
+        document.getElementById("demo").innerHTML = d;
+    </script>
+        <h2>Variables, operators, expression</h2>
+    <script>
+        var price1 = 5;
+        var price2 =6;
+        var total = price1+ price2;
+        documnet.getElementById("demo").innerHTML="The total is: "+ total;
+    </script>
+    <p id="demo"></p>
+        <h2>JavaScript Comparison</h2>
+    <p>Imput your age and click the button:</p>
+    <input id="age" value="18"/>
+    <button onclick="MyFunction()">try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+        function myfunction(){
+            let age = document.getElementById("age").value;
+            let voteable = (age<18)? "Too young":"Old enough";//arrow function
+            document.getElementById("demo").innerHTML = voteable + "to vote.";
+        }
+    </script>
+        <h2>JavaScript if</h2>
+    <p>Display "Good day!" if the hour is less than 18:00:</p>
+    <p id="demo">Good Evening!</p>
+    <script>
+        if(new Date().getHours() < 18){
+            document.getElementById("demo").innerHTML = "Good day!";
+        }
+    </script>
+
+        <h2>JavaScript if ...else</h2>
+    <p>A time-based greeting:</p>
+    <p id="demo"></p>
+    <script>
+        const hour = new Date().getHours();
+        let greeting;
+
+        if(hour < 18){
+            greeting ="Good day";
+        }
+        else{
+            greeting = "Good evening";
+        }
+
+        document.getElementById("demo").innerHTML = greeding;
+    </script>
+
+    <h2>JavaScript For Loop</h2>
+    <p id="demo"></p>
+    <script>
+        let text ="";
+        for(let i=0;i<5;i++){
+            text += "The number is"+i+"<br>";
+        }
+        document.getElementById("demo").innerHTML =text;
+    </script>
+
+    
+</body>
+</html>
